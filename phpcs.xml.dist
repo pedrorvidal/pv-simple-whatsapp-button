@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ruleset name="PV Simple WhatsApp Button">
+    <description>WPCS ruleset for pv-simple-whatsapp-button</description>
+
+    <file>.</file>
+    <exclude-pattern>/vendor/*</exclude-pattern>
+    <exclude-pattern>/node_modules/*</exclude-pattern>
+
+    <arg value="sp"/>
+    <arg name="basepath" value="."/>
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+
+    <rule ref="WordPress-Extra"/>
+    <rule ref="WordPress-Docs"/>
+
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+        <properties>
+            <property name="prefixes" type="array">
+                <element value="pv_swb"/>
+                <element value="PV_SWB"/>
+            </property>
+        </properties>
+    </rule>
+
+    <rule ref="WordPress.Files.FileName">
+        <properties>
+            <property name="is_theme" value="false"/>
+        </properties>
+    </rule>
+</ruleset>

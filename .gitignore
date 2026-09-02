@@ -1,0 +1,71 @@
+# ---- Composer (PHP dependencies) ----
+/vendor/
+composer.phar
+composer.lock
+
+# ---- Node / npm / Sass build tooling ----
+/node_modules/
+npm-debug.log*
+yarn-error.log*
+yarn-debug.log*
+package-lock.json
+yarn.lock
+
+# Compiled CSS from Sass (keep source .scss, ignore generated output + maps)
+*.css.map
+/assets/css/*.css
+!/assets/css/*.min.css
+/assets/dist/
+
+# ---- PHPCS / WPCS ----
+.phpcs-cache
+phpcs.xml
+!phpcs.xml.dist
+phpcbf.log
+
+# ---- PHPStan ----
+.phpstan-cache/
+phpstan.neon
+!phpstan.neon.dist
+
+# ---- WP Unit / PHPUnit / Codeception (WPUnit) ----
+.phpunit.result.cache
+phpunit.xml
+!phpunit.xml.dist
+/tests/_output/*
+!/tests/_output/.gitkeep
+/tests/_support/_generated/
+/tests/tmp/
+codeception.yml
+!codeception.dist.yml
+/wp-tests-config.php
+/tmp/wordpress/
+/tmp/wordpress-tests-lib/
+
+# ---- Coverage / CI reports ----
+/coverage/
+clover.xml
+*.cache
+
+# ---- Environment / secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+
+# ---- IDE / editor ----
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*~
+.*.sw?
+
+# ---- Logs ----
+*.log
+
+# ---- Packaged plugin zip ----
+*.zip
