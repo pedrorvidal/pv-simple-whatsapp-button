@@ -69,3 +69,6 @@ Thumbs.db
 
 # ---- Packaged plugin zip ----
 *.zip
+
+# ---- Claude Code project docs (local-only) ----
+CLAUDE.md
