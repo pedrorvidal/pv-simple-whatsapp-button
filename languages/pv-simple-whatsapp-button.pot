@@ -1,0 +1,51 @@
+# Copyright (C) 2026 Pedro Vidal
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: PV Simple WhatsApp Button 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pv-simple-whatsapp-button\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-02T20:18:00-03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: pv-simple-whatsapp-button\n"
+
+#. Plugin Name of the plugin
+#: pv-simple-whatsapp-button.php
+msgid "PV Simple WhatsApp Button"
+msgstr ""
+
+#. Description of the plugin
+#: pv-simple-whatsapp-button.php
+msgid "Configurable floating WhatsApp button (number and message)."
+msgstr ""
+
+#. Author of the plugin
+#: pv-simple-whatsapp-button.php
+msgid "Pedro Vidal"
+msgstr ""
+
+#: includes/class-pv-swb-settings.php:45
+#: includes/class-pv-swb-settings.php:46
+msgid "WhatsApp Button"
+msgstr ""
+
+#: includes/class-pv-swb-settings.php:107
+msgid "WhatsApp Button - Settings"
+msgstr ""
+
+#: includes/class-pv-swb-settings.php:113
+msgid "WhatsApp number"
+msgstr ""
+
+#: includes/class-pv-swb-settings.php:124
+msgid "Digits only, including country and area code (e.g. 5551999999999)."
+msgstr ""
+
+#: includes/class-pv-swb-settings.php:129
+msgid "Default message"
+msgstr ""

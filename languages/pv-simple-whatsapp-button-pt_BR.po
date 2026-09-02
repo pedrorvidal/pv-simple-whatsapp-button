@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PV Simple WhatsApp Button 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-02 12:00+0000\n"
+"PO-Revision-Date: 2026-09-02 12:00+0000\n"
+"Last-Translator: Pedro Vidal\n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: pv-simple-whatsapp-button\n"
+
+msgid "WhatsApp Button"
+msgstr "Botão do WhatsApp"
+
+msgid "WhatsApp Button - Settings"
+msgstr "Botão do WhatsApp - Configurações"
+
+msgid "WhatsApp number"
+msgstr "Número do WhatsApp"
+
+msgid "Digits only, including country and area code (e.g. 5551999999999)."
+msgstr "Apenas números, incluindo código do país e DDD (ex: 5551999999999)."
+
+msgid "Default message"
+msgstr "Mensagem padrão"

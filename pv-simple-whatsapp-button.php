@@ -24,6 +24,12 @@ require_once __DIR__ . '/includes/class-pv-swb-settings.php';
  * Initializes the plugin.
  */
 function pv_swb_init(): void {
+	load_plugin_textdomain(
+		'pv-simple-whatsapp-button',
+		false,
+		dirname( plugin_basename( __FILE__ ) ) . '/languages'
+	);
+
 	$settings = new PV_SWB_Settings();
 	$settings->init();
 }
