@@ -1,15 +1,12 @@
 # ---- Composer (PHP dependencies) ----
 /vendor/
 composer.phar
-composer.lock
 
 # ---- Node / npm / Sass build tooling ----
 /node_modules/
 npm-debug.log*
 yarn-error.log*
 yarn-debug.log*
-package-lock.json
-yarn.lock
 
 # Compiled CSS from Sass (keep source .scss, ignore generated output + maps)
 *.css.map
@@ -25,8 +22,6 @@ phpcbf.log
 
 # ---- PHPStan ----
 .phpstan-cache/
-phpstan.neon
-!phpstan.neon.dist
 
 # ---- WP Unit / PHPUnit / Codeception (WPUnit) ----
 .phpunit.result.cache
