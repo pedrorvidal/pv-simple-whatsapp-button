@@ -88,7 +88,7 @@ pv-simple-whatsapp-button/
 
 ## ✅ Testing & Code Quality
 
-This project enforces strict standards via PHPStan, WordPress Coding Standards (WPCS), and PHPUnit.
+This project enforces strict standards via PHPStan, WordPress Coding Standards (WPCS), PHPUnit, and a Jest unit suite for the TypeScript source.
 
 ### 🔍 Static analysis
 
@@ -115,10 +115,18 @@ vendor/bin/phpunit
 
 Tests use [Brain Monkey](https://github.com/Brain-WP/BrainMonkey) to mock WordPress core functions, avoiding the overhead of a full WordPress test environment. Coverage includes settings sanitization and WhatsApp URL construction.
 
+### 🧪 JavaScript unit tests
+
+```bash
+npm test
+```
+
+Runs the Jest suite (via `wp-scripts test-unit-js`) against `src/index.ts`, covering the digits-only input sanitization.
+
 ### ▶️ Running everything
 
 ```bash
-vendor/bin/phpcs && vendor/bin/phpstan analyse && vendor/bin/phpunit
+vendor/bin/phpcs && vendor/bin/phpstan analyse && vendor/bin/phpunit && npm test
 ```
 
 ## 🌍 Translations
@@ -137,7 +145,7 @@ To produce a distributable `.zip`:
 
 ```bash
 npm run build
-vendor/bin/phpcs && vendor/bin/phpstan analyse && vendor/bin/phpunit
+vendor/bin/phpcs && vendor/bin/phpstan analyse && vendor/bin/phpunit && npm test
 ```
 
 Once all checks pass, zip the plugin directory (excluding `vendor/`, `node_modules/`, and `tests/`), and upload it via **Plugins → Add New → Upload Plugin**, or push a tagged release to GitHub.
