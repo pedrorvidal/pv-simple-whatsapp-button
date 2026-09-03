@@ -27,7 +27,8 @@ class PV_SWB_Settings {
 	 *
 	 * @var string
 	 */
-	private const OPTION_NAME = 'pv_swb_settings';
+	private const OPTION_NAME        = 'pv_swb_settings';
+	private const MAX_MESSAGE_LENGTH = 200;
 
 	/**
 	 * Registers WordPress hooks.
@@ -72,7 +73,7 @@ class PV_SWB_Settings {
 
 		return array(
 			'phone_number' => isset( $input['phone_number'] ) ? preg_replace( '/[^0-9]/', '', (string) $input['phone_number'] ) : '',
-			'message'      => isset( $input['message'] ) ? sanitize_text_field( (string) $input['message'] ) : '',
+			'message'      => isset( $input['message'] ) ? mb_substr( sanitize_text_field( (string) $input['message'] ), 0, self::MAX_MESSAGE_LENGTH ) : '',
 		);
 	}
 
@@ -81,7 +82,7 @@ class PV_SWB_Settings {
 	 *
 	 * @return SettingsData
 	 */
-	private function get_settings(): array {
+	public static function get_settings(): array {
 		$defaults = array(
 			'phone_number' => '',
 			'message'      => '',
@@ -101,7 +102,7 @@ class PV_SWB_Settings {
 	 * Renders the settings page markup.
 	 */
 	public function render_settings_page(): void {
-		$settings = $this->get_settings();
+		$settings = self::get_settings();
 		?>
 		<div class="wrap">
 			<h1><?php esc_html_e( 'WhatsApp Button - Settings', 'pv-simple-whatsapp-button' ); ?></h1>
@@ -135,7 +136,9 @@ class PV_SWB_Settings {
 								name="<?php echo esc_attr( self::OPTION_NAME ); ?>[message]"
 								value="<?php echo esc_attr( $settings['message'] ); ?>"
 								class="regular-text"
+								maxlength="<?php echo esc_attr( (string) self::MAX_MESSAGE_LENGTH ); ?>"
 							/>
+							<p class="description"><?php esc_html_e( 'Max length: 200 characters.', 'pv-simple-whatsapp-button' ); ?></p>
 						</td>
 					</tr>
 				</table>

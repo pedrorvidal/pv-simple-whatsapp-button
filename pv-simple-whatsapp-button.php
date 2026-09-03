@@ -19,6 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require_once __DIR__ . '/includes/class-pv-swb-settings.php';
+require_once __DIR__ . '/includes/class-pv-swb-render.php';
 
 /**
  * Initializes the plugin.
@@ -29,8 +30,10 @@ function pv_swb_init(): void {
 		false,
 		dirname( plugin_basename( __FILE__ ) ) . '/languages'
 	);
-
 	$settings = new PV_SWB_Settings();
 	$settings->init();
+
+	$render = new PV_SWB_Render();
+	$render->init();
 }
 add_action( 'plugins_loaded', 'pv_swb_init' );

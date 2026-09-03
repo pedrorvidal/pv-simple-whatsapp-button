@@ -27,3 +27,6 @@ msgstr "Apenas números, incluindo código do país e DDD (ex: 5551999999999)."
 
 msgid "Default message"
 msgstr "Mensagem padrão"
+
+msgid "Max length: 200 characters."
+msgstr "Tamanho máximo: 200 caracteres."
