@@ -18,6 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+define( 'PV_SWB_PLUGIN_FILE', __FILE__ );
+
 require_once __DIR__ . '/includes/class-pv-swb-settings.php';
 require_once __DIR__ . '/includes/class-pv-swb-render.php';
 

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("pv_swb_phone_number");e&&e.addEventListener("input",()=>{e.value=e.value.replace(/[^0-9]/g,"")})});
