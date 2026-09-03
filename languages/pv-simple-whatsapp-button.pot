@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-02T22:53:29-03:00\n"
+"POT-Creation-Date: 2026-09-02T23:48:18-03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pv-simple-whatsapp-button\n"
@@ -29,31 +29,44 @@ msgstr ""
 msgid "Pedro Vidal"
 msgstr ""
 
-#: includes/class-pv-swb-render.php:61
+#: includes/class-pv-swb-render.php:62
 msgid "Contact us on WhatsApp"
 msgstr ""
 
-#: includes/class-pv-swb-settings.php:59
-#: includes/class-pv-swb-settings.php:60
+#: includes/class-pv-swb-settings.php:82
+#: includes/class-pv-swb-settings.php:83
 msgid "WhatsApp Button"
 msgstr ""
 
-#: includes/class-pv-swb-settings.php:123
+#: includes/class-pv-swb-settings.php:185
 msgid "WhatsApp Button - Settings"
 msgstr ""
 
-#: includes/class-pv-swb-settings.php:129
+#: includes/class-pv-swb-settings.php:191
 msgid "WhatsApp number"
 msgstr ""
 
-#: includes/class-pv-swb-settings.php:143
+#: includes/class-pv-swb-settings.php:205
 msgid "Digits only, including country and area code (e.g. 5511999999999)."
 msgstr ""
 
-#: includes/class-pv-swb-settings.php:148
+#: includes/class-pv-swb-settings.php:210
 msgid "Default message"
 msgstr ""
 
-#: includes/class-pv-swb-settings.php:159
+#: includes/class-pv-swb-settings.php:221
 msgid "Max length: 200 characters."
+msgstr ""
+
+#: includes/class-pv-swb-settings.php:226
+#: includes/class-pv-swb-settings.php:231
+msgid "Button position"
+msgstr ""
+
+#: includes/class-pv-swb-settings.php:240
+msgid "Left"
+msgstr ""
+
+#: includes/class-pv-swb-settings.php:250
+msgid "Right"
 msgstr ""

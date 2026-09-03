@@ -33,3 +33,12 @@ msgstr "Mensagem padrão"
 
 msgid "Max length: 200 characters."
 msgstr "Tamanho máximo: 200 caracteres."
+
+msgid "Button position"
+msgstr "Posição do botão"
+
+msgid "Left"
+msgstr "Esquerda"
+
+msgid "Right"
+msgstr "Direita"

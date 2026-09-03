@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @phpstan-type SettingsData array{
  *     phone_number: string,
  *     message: string,
+ *     position: string,
  * }
  */
 class PV_SWB_Settings {
@@ -49,6 +50,20 @@ class PV_SWB_Settings {
 	 * @var string
 	 */
 	private string $settings_page_hook = '';
+
+	/**
+	 * Allowed values for the button's horizontal position.
+	 *
+	 * @var string[]
+	 */
+	private const ALLOWED_POSITIONS = array( 'left', 'right' );
+
+	/**
+	 * Default position when none is set.
+	 *
+	 * @var string
+	 */
+	private const DEFAULT_POSITION = 'right';
 
 	/**
 	 * Registers WordPress hooks.
@@ -125,10 +140,16 @@ class PV_SWB_Settings {
 		$input = is_array( $input ) ? $input : array();
 
 		$phone_number = isset( $input['phone_number'] ) ? preg_replace( '/[^0-9]/', '', (string) $input['phone_number'] ) : '';
+		$position     = isset( $input['position'] ) ? (string) $input['position'] : self::DEFAULT_POSITION;
+
+		if ( ! in_array( $position, self::ALLOWED_POSITIONS, true ) ) {
+			$position = self::DEFAULT_POSITION;
+		}
 
 		return array(
 			'phone_number' => substr( (string) $phone_number, 0, self::MAX_PHONE_LENGTH ),
 			'message'      => isset( $input['message'] ) ? mb_substr( sanitize_text_field( (string) $input['message'] ), 0, self::MAX_MESSAGE_LENGTH ) : '',
+			'position'     => $position,
 		);
 	}
 
@@ -141,6 +162,7 @@ class PV_SWB_Settings {
 		$defaults = array(
 			'phone_number' => '',
 			'message'      => '',
+			'position'     => self::DEFAULT_POSITION,
 		);
 
 		/**
@@ -197,6 +219,37 @@ class PV_SWB_Settings {
 								maxlength="<?php echo esc_attr( (string) self::MAX_MESSAGE_LENGTH ); ?>"
 							/>
 							<p class="description"><?php esc_html_e( 'Max length: 200 characters.', 'pv-simple-whatsapp-button' ); ?></p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							<?php esc_html_e( 'Button position', 'pv-simple-whatsapp-button' ); ?>
+						</th>
+						<td>
+							<fieldset>
+								<legend class="screen-reader-text">
+									<?php esc_html_e( 'Button position', 'pv-simple-whatsapp-button' ); ?>
+								</legend>
+								<label>
+									<input
+										type="radio"
+										name="<?php echo esc_attr( self::OPTION_NAME ); ?>[position]"
+										value="left"
+										<?php checked( $settings['position'], 'left' ); ?>
+									/>
+									<?php esc_html_e( 'Left', 'pv-simple-whatsapp-button' ); ?>
+								</label>
+								<br />
+								<label>
+									<input
+										type="radio"
+										name="<?php echo esc_attr( self::OPTION_NAME ); ?>[position]"
+										value="right"
+										<?php checked( $settings['position'], 'right' ); ?>
+									/>
+									<?php esc_html_e( 'Right', 'pv-simple-whatsapp-button' ); ?>
+								</label>
+							</fieldset>
 						</td>
 					</tr>
 				</table>
