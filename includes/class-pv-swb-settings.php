@@ -27,7 +27,20 @@ class PV_SWB_Settings {
 	 *
 	 * @var string
 	 */
-	private const OPTION_NAME        = 'pv_swb_settings';
+	private const OPTION_NAME = 'pv_swb_settings';
+
+	/**
+	 * Maximum number of digits in a phone number, per the E.164 standard.
+	 *
+	 * @var int
+	 */
+	private const MAX_PHONE_LENGTH = 15;
+
+	/**
+	 * WhatsApp's documented maximum text message length, in characters.
+	 *
+	 * @var int
+	 */
 	private const MAX_MESSAGE_LENGTH = 200;
 
 	/**
@@ -71,8 +84,10 @@ class PV_SWB_Settings {
 	public function sanitize_settings( $input ): array {
 		$input = is_array( $input ) ? $input : array();
 
+		$phone_number = isset( $input['phone_number'] ) ? preg_replace( '/[^0-9]/', '', (string) $input['phone_number'] ) : '';
+
 		return array(
-			'phone_number' => isset( $input['phone_number'] ) ? preg_replace( '/[^0-9]/', '', (string) $input['phone_number'] ) : '',
+			'phone_number' => substr( (string) $phone_number, 0, self::MAX_PHONE_LENGTH ),
 			'message'      => isset( $input['message'] ) ? mb_substr( sanitize_text_field( (string) $input['message'] ), 0, self::MAX_MESSAGE_LENGTH ) : '',
 		);
 	}
@@ -120,9 +135,12 @@ class PV_SWB_Settings {
 								name="<?php echo esc_attr( self::OPTION_NAME ); ?>[phone_number]"
 								value="<?php echo esc_attr( $settings['phone_number'] ); ?>"
 								class="regular-text"
-								placeholder="5551999999999"
+								placeholder="5511999999999"
+								maxlength="<?php echo esc_attr( (string) self::MAX_PHONE_LENGTH ); ?>"
+								inputmode="numeric"
+								pattern="[0-9]*"
 							/>
-							<p class="description"><?php esc_html_e( 'Digits only, including country and area code (e.g. 5551999999999).', 'pv-simple-whatsapp-button' ); ?></p>
+							<p class="description"><?php esc_html_e( 'Digits only, including country and area code (e.g. 5511999999999).', 'pv-simple-whatsapp-button' ); ?></p>
 						</td>
 					</tr>
 					<tr>

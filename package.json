@@ -1,0 +1,25 @@
+{
+  "name": "pv-simple-whatsapp-button",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrorvidal/pv-simple-whatsapp-button.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pedrorvidal/pv-simple-whatsapp-button/issues"
+  },
+  "homepage": "https://github.com/pedrorvidal/pv-simple-whatsapp-button#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^34.2.0",
+    "typescript": "^6.0.3"
+  }
+}

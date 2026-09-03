@@ -13,6 +13,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: pv-simple-whatsapp-button\n"
 
+msgid "Contact us on WhatsApp"
+msgstr "Fale conosco pelo WhatsApp"
+
 msgid "WhatsApp Button"
 msgstr "Botão do WhatsApp"
 
@@ -22,8 +25,8 @@ msgstr "Botão do WhatsApp - Configurações"
 msgid "WhatsApp number"
 msgstr "Número do WhatsApp"
 
-msgid "Digits only, including country and area code (e.g. 5551999999999)."
-msgstr "Apenas números, incluindo código do país e DDD (ex: 5551999999999)."
+msgid "Digits only, including country and area code (e.g. 5511999999999)."
+msgstr "Apenas números, incluindo código do país e DDD (ex: 5511999999999)."
 
 msgid "Default message"
 msgstr "Mensagem padrão"
