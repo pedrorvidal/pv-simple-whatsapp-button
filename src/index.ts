@@ -1,3 +1,7 @@
+export function stripNonDigits(value: string): string {
+    return value.replace(/[^0-9]/g, '');
+}
+
 document.addEventListener('DOMContentLoaded', (): void => {
     const field = document.getElementById(
         'pv_swb_phone_number',
@@ -8,6 +12,6 @@ document.addEventListener('DOMContentLoaded', (): void => {
     }
 
     field.addEventListener('input', (): void => {
-        field.value = field.value.replace(/[^0-9]/g, '');
+        field.value = stripNonDigits(field.value);
     });
 });

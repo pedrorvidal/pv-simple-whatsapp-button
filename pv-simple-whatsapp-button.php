@@ -2,7 +2,7 @@
 /**
  * Plugin Name: PV Simple WhatsApp Button
  * Description: Configurable floating WhatsApp button (number and message).
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Pedro Vidal
  * License: GPL v2 or later
  * Text Domain: pv-simple-whatsapp-button

@@ -1,11 +1,12 @@
 {
     "name": "pv-simple-whatsapp-button",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
     "main": "index.js",
     "scripts": {
         "build": "wp-scripts build",
-        "start": "wp-scripts start"
+        "start": "wp-scripts start",
+        "test": "wp-scripts test-unit-js"
     },
     "repository": {
         "type": "git",
