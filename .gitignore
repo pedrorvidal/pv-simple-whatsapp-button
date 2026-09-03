@@ -72,3 +72,4 @@ Thumbs.db
 
 # ---- Claude Code project docs (local-only) ----
 CLAUDE.md
+.claude/
